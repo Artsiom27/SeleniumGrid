@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "GridTest">
+
+    <test name="node1">
+        <parameter name="node" value="http://localhost:14815/wd/hub"/>
+        <classes>
+            <class name="Grid" >
+                <methods>
+                    <include name="loginTest" />
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="node2">
+        <parameter name="node" value="http://localhost:5432/wd/hub"/>
+        <classes>
+            <class name="Grid" >
+                <methods>
+                    <include name="loginTest" />
+
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite> <!-- Suite -->
